@@ -48,6 +48,8 @@
     self.consoleTV = tv;
     
     currentIndex = tv.text.length;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUI:) name:@"updateUI" object:nil];
 }
 
 #pragma mark - UITextViewDelegate
@@ -73,6 +75,15 @@
         textView.selectedRange = lastSelectedRange;
     }
     lastSelectedRange = textView.selectedRange;
+}
+
+#pragma mark - handle notification
+
+- (void)updateUI:(NSNotification *)notify
+{
+    NSDictionary *config = notify.object;
+    self.consoleTV.frame = CGRectMake(0, 0, [config[@"width"] intValue], [config[@"height"] intValue]);
+    self.consoleTV.backgroundColor = [UIColor colorWithRed:[config[@"red"] floatValue] green:[config[@"green"] floatValue] blue:[config[@"blue"] floatValue] alpha:1];
 }
 
 #pragma mark - private

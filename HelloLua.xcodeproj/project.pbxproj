@@ -47,6 +47,7 @@
 		D80E799A1BFF287100BF1759 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = D80E79751BFF287100BF1759 /* lvm.c */; };
 		D80E799B1BFF287100BF1759 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = D80E79771BFF287100BF1759 /* lzio.c */; };
 		D80E799E1BFF28A100BF1759 /* LuaConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = D80E799D1BFF28A100BF1759 /* LuaConsole.m */; };
+		D80E79A31C04642600BF1759 /* config.lua in Resources */ = {isa = PBXBuildFile; fileRef = D80E79A21C04642600BF1759 /* config.lua */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,7 @@
 		D80E79781BFF287100BF1759 /* lzio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzio.h; sourceTree = "<group>"; };
 		D80E799C1BFF28A100BF1759 /* LuaConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaConsole.h; sourceTree = "<group>"; };
 		D80E799D1BFF28A100BF1759 /* LuaConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuaConsole.m; sourceTree = "<group>"; };
+		D80E79A21C04642600BF1759 /* config.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.lua; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				D80E799D1BFF28A100BF1759 /* LuaConsole.m */,
 				D80E792A1BFF284000BF1759 /* ViewController.h */,
 				D80E792B1BFF284000BF1759 /* ViewController.m */,
+				D80E79A21C04642600BF1759 /* config.lua */,
 				D80E79301BFF284000BF1759 /* Assets.xcassets */,
 				D80E79351BFF284000BF1759 /* Info.plist */,
 				D80E79241BFF284000BF1759 /* Supporting Files */,
@@ -300,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80E79A31C04642600BF1759 /* config.lua in Resources */,
 				D80E79311BFF284000BF1759 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
