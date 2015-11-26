@@ -13,6 +13,7 @@
 
 #define LOG_FILE_PATH [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"stdout.log"]
 #define CONFIG_FILE_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"config.lua"]
+#define CONFIG_BYTECODE_FILE_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"config.out"]
 
 @implementation LuaConsole
 
@@ -117,6 +118,9 @@ int configUI(lua_State *L)
 
 void loadConfig (int *width, int *height, float *red, float *green, float *blue)
 {
+//    if (luaL_dofile(L, [CONFIG_BYTECODE_FILE_PATH UTF8String]))
+//        lua_writestringerror("cannot run configuration file: %s", lua_tostring(L, -1));
+    
     if (luaL_dofile(L, [CONFIG_FILE_PATH UTF8String]))
         lua_writestringerror("cannot run configuration file: %s", lua_tostring(L, -1));
     lua_getglobal(L, "width");
